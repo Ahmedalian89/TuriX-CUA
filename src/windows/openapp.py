@@ -26,6 +26,15 @@ _BUILTIN_EXES = [
     "regedit.exe", "taskmgr.exe", "explorer.exe",
 ]
 
+# UWP / AppX apps that don't appear as .lnk shortcuts
+_UWP_APPS = [
+    ("Calculator", "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App"),
+    ("الحاسبة",    "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App"),
+    ("Camera",     "Microsoft.WindowsCamera_8wekyb3d8bbwe!App"),
+    ("Photos",     "Microsoft.Windows.Photos_8wekyb3d8bbwe!App"),
+    ("Settings",   "ms-settings:"),
+]
+
 def _scan_builtin_apps() -> list[dict]:
     sys32 = Path(os.environ["SystemRoot"]) / "System32"
     apps  = []
@@ -39,6 +48,16 @@ def _scan_builtin_apps() -> list[dict]:
                 "cwd":  str(sys32),
                 "lnk":  None
             })
+    # Add UWP apps
+    for name, appid in _UWP_APPS:
+        apps.append({
+            "name": name,
+            "exe":  None,
+            "args": "",
+            "cwd":  "",
+            "lnk":  None,
+            "appid": appid,
+        })
     return apps
 
 def _filter_apps(apps: list[dict]) -> list[dict]:
@@ -49,6 +68,14 @@ def _filter_apps(apps: list[dict]) -> list[dict]:
                        "帮助", "帮助文档", "documentation", "readme")
 
     for app in apps:
+        # UWP apps have no exe — keep them
+        if app.get("appid"):
+            key = app["appid"].lower()
+            if key not in seen:
+                seen.add(key)
+                useful.append(app)
+            continue
+
         exe = app.get("exe") or ""
         if not exe or not Path(exe).exists():
             continue
@@ -155,6 +182,23 @@ async def _launch_record(rec: dict) -> tuple[bool, str]:
     exe = rec.get("exe")
     args = rec.get("args", "")
     cwd  = rec.get("cwd", "")
+    appid = rec.get("appid")
+
+    # 0) UWP / AppX apps via shell:AppsFolder
+    if appid:
+        if appid.startswith("ms-"):
+            # ms-settings: style URI
+            try:
+                os.startfile(appid)
+                return True, f"URI opened: {appid}"
+            except OSError as e:
+                return False, f"URI open failed: {e}"
+        else:
+            try:
+                os.startfile(f"shell:AppsFolder\\{appid}")
+                return True, f"UWP launched: {appid}"
+            except OSError as e:
+                return False, f"UWP launch failed: {e}"
 
 
     if lnk and Path(lnk).exists():

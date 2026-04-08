@@ -1,0 +1,839 @@
+﻿[
+  {
+    "name": "Access",
+    "exe": "C:\\Program Files\\Microsoft Office\\root\\Office16\\MSACCESS.EXE",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Access.lnk"
+  },
+  {
+    "name": "BlueStacks 5",
+    "exe": "C:\\Program Files\\BlueStacks_nxt\\HD-Player.exe",
+    "args": "--instance Pie64",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\BlueStacks 5.lnk"
+  },
+  {
+    "name": "BlueStacks Multi-Instance Manager",
+    "exe": "C:\\Program Files\\BlueStacks_nxt\\HD-MultiInstanceManager.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\BlueStacks Multi-Instance Manager.lnk"
+  },
+  {
+    "name": "Excel",
+    "exe": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Excel.lnk"
+  },
+  {
+    "name": "Google Chrome",
+    "exe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "args": "",
+    "cwd": "C:\\Program Files\\Google\\Chrome\\Application",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Google Chrome.lnk"
+  },
+  {
+    "name": "Immersive Control Panel",
+    "exe": "C:\\Windows\\System32\\Control.exe",
+    "args": "",
+    "cwd": "%HOMEDRIVE%%HOMEPATH%",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Immersive Control Panel.lnk"
+  },
+  {
+    "name": "Microsoft Edge",
+    "exe": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+    "args": "",
+    "cwd": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Microsoft Edge.lnk"
+  },
+  {
+    "name": "Notepad++",
+    "exe": "C:\\Program Files\\Notepad++\\notepad++.exe",
+    "args": "",
+    "cwd": "C:\\Program Files\\Notepad++",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Notepad++.lnk"
+  },
+  {
+    "name": "OneDrive",
+    "exe": "C:\\Program Files\\Microsoft OneDrive\\OneDrive.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\OneDrive.lnk"
+  },
+  {
+    "name": "OneNote",
+    "exe": "C:\\Program Files\\Microsoft Office\\root\\Office16\\ONENOTE.EXE",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\OneNote.lnk"
+  },
+  {
+    "name": "Outlook (classic)",
+    "exe": "C:\\Program Files\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Outlook (classic).lnk"
+  },
+  {
+    "name": "PowerPoint",
+    "exe": "C:\\Program Files\\Microsoft Office\\root\\Office16\\POWERPNT.EXE",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PowerPoint.lnk"
+  },
+  {
+    "name": "Waves MaxxAudioPro",
+    "exe": "C:\\Program Files\\Waves\\MaxxAudio\\MaxxAudioPro.exe",
+    "args": "",
+    "cwd": "C:\\Program Files\\Waves\\MaxxAudio\\",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Waves MaxxAudioPro.lnk"
+  },
+  {
+    "name": "Word",
+    "exe": "C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word.lnk"
+  },
+  {
+    "name": "Zotero",
+    "exe": "C:\\Program Files\\Zotero\\zotero.exe",
+    "args": "",
+    "cwd": "C:\\Program Files\\Zotero",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Zotero.lnk"
+  },
+  {
+    "name": "Speech Recognition",
+    "exe": "C:\\Windows\\Speech\\Common\\sapisvr.exe",
+    "args": "-SpeechUX",
+    "cwd": "%windir%\\system32\\Speech\\SpeechUX",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessibility\\Speech Recognition.lnk"
+  },
+  {
+    "name": "Math Input Panel",
+    "exe": "C:\\Program Files\\Common Files\\Microsoft Shared\\Ink\\mip.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\Math Input Panel.lnk"
+  },
+  {
+    "name": "Notepad",
+    "exe": "C:\\Windows\\system32\\notepad.exe",
+    "args": "",
+    "cwd": "%HOMEDRIVE%%HOMEPATH%",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\Notepad.lnk"
+  },
+  {
+    "name": "Paint",
+    "exe": "C:\\Windows\\system32\\mspaint.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\Paint.lnk"
+  },
+  {
+    "name": "Quick Assist",
+    "exe": "C:\\Windows\\system32\\quickassist.exe",
+    "args": "",
+    "cwd": "%windir%\\system32\\",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\Quick Assist.lnk"
+  },
+  {
+    "name": "Remote Desktop Connection",
+    "exe": "C:\\Windows\\system32\\mstsc.exe",
+    "args": "",
+    "cwd": "%windir%\\system32\\",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\Remote Desktop Connection.lnk"
+  },
+  {
+    "name": "Snipping Tool",
+    "exe": "C:\\Windows\\system32\\SnippingTool.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\Snipping Tool.lnk"
+  },
+  {
+    "name": "Steps Recorder",
+    "exe": "C:\\Windows\\system32\\psr.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\Steps Recorder.lnk"
+  },
+  {
+    "name": "Windows Fax and Scan",
+    "exe": "C:\\Windows\\system32\\WFS.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\Windows Fax and Scan.lnk"
+  },
+  {
+    "name": "Windows Media Player",
+    "exe": "C:\\Program Files (x86)\\Windows Media Player\\wmplayer.exe",
+    "args": "/prefetch:1",
+    "cwd": "%ProgramFiles(x86)%\\Windows Media Player",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\Windows Media Player.lnk"
+  },
+  {
+    "name": "Wordpad",
+    "exe": "C:\\Program Files\\Windows NT\\Accessories\\wordpad.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\Wordpad.lnk"
+  },
+  {
+    "name": "Component Services",
+    "exe": "C:\\Windows\\system32\\comexp.msc",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Component Services.lnk"
+  },
+  {
+    "name": "Computer Management",
+    "exe": "C:\\Windows\\system32\\compmgmt.msc",
+    "args": "/s",
+    "cwd": "%HOMEDRIVE%%HOMEPATH%",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Computer Management.lnk"
+  },
+  {
+    "name": "dfrgui",
+    "exe": "C:\\Windows\\system32\\dfrgui.exe",
+    "args": "",
+    "cwd": "%systemroot%\\system32",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\dfrgui.lnk"
+  },
+  {
+    "name": "Disk Cleanup",
+    "exe": "C:\\Windows\\system32\\cleanmgr.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Disk Cleanup.lnk"
+  },
+  {
+    "name": "Event Viewer",
+    "exe": "C:\\Windows\\system32\\eventvwr.msc",
+    "args": "/s",
+    "cwd": "%windir%\\system32",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Event Viewer.lnk"
+  },
+  {
+    "name": "iSCSI Initiator",
+    "exe": "C:\\Windows\\system32\\iscsicpl.exe",
+    "args": "",
+    "cwd": "%windir%\\system32",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\iSCSI Initiator.lnk"
+  },
+  {
+    "name": "Memory Diagnostics Tool",
+    "exe": "C:\\Windows\\system32\\MdSched.exe",
+    "args": "",
+    "cwd": "%windir%\\system32",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Memory Diagnostics Tool.lnk"
+  },
+  {
+    "name": "ODBC Data Sources (32-bit)",
+    "exe": "C:\\Windows\\syswow64\\odbcad32.exe",
+    "args": "",
+    "cwd": "%windir%\\syswow64",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\ODBC Data Sources (32-bit).lnk"
+  },
+  {
+    "name": "ODBC Data Sources (64-bit)",
+    "exe": "C:\\Windows\\system32\\odbcad32.exe",
+    "args": "",
+    "cwd": "%windir%\\system32",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\ODBC Data Sources (64-bit).lnk"
+  },
+  {
+    "name": "Performance Monitor",
+    "exe": "C:\\Windows\\system32\\perfmon.msc",
+    "args": "/s",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Performance Monitor.lnk"
+  },
+  {
+    "name": "Print Management",
+    "exe": "C:\\Windows\\system32\\printmanagement.msc",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Print Management.lnk"
+  },
+  {
+    "name": "RecoveryDrive",
+    "exe": "C:\\Windows\\system32\\RecoveryDrive.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\RecoveryDrive.lnk"
+  },
+  {
+    "name": "Registry Editor",
+    "exe": "C:\\Windows\\regedit.exe",
+    "args": "",
+    "cwd": "%windir%",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Registry Editor.lnk"
+  },
+  {
+    "name": "Resource Monitor",
+    "exe": "C:\\Windows\\system32\\perfmon.exe",
+    "args": "/res",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Resource Monitor.lnk"
+  },
+  {
+    "name": "Security Configuration Management",
+    "exe": "C:\\Windows\\system32\\secpol.msc",
+    "args": "/s",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Security Configuration Management.lnk"
+  },
+  {
+    "name": "services",
+    "exe": "C:\\Windows\\system32\\services.msc",
+    "args": "",
+    "cwd": "%HOMEDRIVE%%HOMEPATH%",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\services.lnk"
+  },
+  {
+    "name": "System Configuration",
+    "exe": "C:\\Windows\\system32\\msconfig.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\System Configuration.lnk"
+  },
+  {
+    "name": "System Information",
+    "exe": "C:\\Windows\\system32\\msinfo32.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\System Information.lnk"
+  },
+  {
+    "name": "Task Scheduler",
+    "exe": "C:\\Windows\\system32\\taskschd.msc",
+    "args": "/s",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Task Scheduler.lnk"
+  },
+  {
+    "name": "Windows Defender Firewall with Advanced Security",
+    "exe": "C:\\Windows\\system32\\WF.msc",
+    "args": "",
+    "cwd": "%windir%\\system32",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Windows Defender Firewall with Advanced Security.lnk"
+  },
+  {
+    "name": "Android Studio",
+    "exe": "C:\\Program Files\\Android\\Android Studio1\\bin\\studio64.exe",
+    "args": "",
+    "cwd": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Android Studio",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Android Studio\\Android Studio.lnk"
+  },
+  {
+    "name": "BlueStacks Store",
+    "exe": "C:\\Program Files (x86)\\BlueStacks X\\BlueStacks X.exe",
+    "args": "",
+    "cwd": "C:\\Program Files (x86)\\BlueStacks X",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\BlueStacks Store\\BlueStacks Store.lnk"
+  },
+  {
+    "name": "Foxit PDF Reader",
+    "exe": "C:\\Program Files\\Foxit Software\\Foxit PDF Reader\\FoxitPDFReader.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Foxit PDF Reader\\Foxit PDF Reader.lnk"
+  },
+  {
+    "name": "Uninstall Foxit PDF Reader",
+    "exe": "C:\\Windows\\System32\\msiexec.exe",
+    "args": "/x {01A75E1E-7567-11F0-B81F-54BF64A63C26}",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Foxit PDF Reader\\Uninstall Foxit PDF Reader.lnk"
+  },
+  {
+    "name": "Buy License",
+    "exe": "C:\\Program Files (x86)\\Franson\\CoordTrans v2.3\\links\\BuyLicense.url",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Franson CoordTrans v2.3\\Buy License.lnk"
+  },
+  {
+    "name": "Franson CoordTrans",
+    "exe": "C:\\Program Files (x86)\\Franson\\CoordTrans v2.3\\CoordTrans.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Franson CoordTrans v2.3\\Franson CoordTrans.lnk"
+  },
+  {
+    "name": "Homepage",
+    "exe": "C:\\Program Files (x86)\\Franson\\CoordTrans v2.3\\links\\HomePage.url",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Franson CoordTrans v2.3\\Homepage.lnk"
+  },
+  {
+    "name": "Uninstall",
+    "exe": "C:\\Windows\\SysWOW64\\msiexec.exe",
+    "args": "/x {6080C249-C1EA-4E5E-A41E-58666ACC68C3}",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Franson CoordTrans v2.3\\Uninstall.lnk"
+  },
+  {
+    "name": "User's Guide",
+    "exe": "C:\\Program Files (x86)\\Franson\\CoordTrans v2.3\\links\\UsersGuide.url",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Franson CoordTrans v2.3\\User's Guide.lnk"
+  },
+  {
+    "name": "Git Bash",
+    "exe": "C:\\Program Files\\Git\\git-bash.exe",
+    "args": "--cd-to-home",
+    "cwd": "%HOMEDRIVE%%HOMEPATH%",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Git\\Git Bash.lnk"
+  },
+  {
+    "name": "Git CMD",
+    "exe": "C:\\Program Files\\Git\\git-cmd.exe",
+    "args": "--cd-to-home",
+    "cwd": "%HOMEDRIVE%%HOMEPATH%",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Git\\Git CMD.lnk"
+  },
+  {
+    "name": "Git GUI",
+    "exe": "C:\\Program Files\\Git\\cmd\\git-gui.exe",
+    "args": "",
+    "cwd": "%HOMEDRIVE%%HOMEPATH%",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Git\\Git GUI.lnk"
+  },
+  {
+    "name": "Git Release Notes",
+    "exe": "C:\\Program Files\\Git\\ReleaseNotes.html",
+    "args": "",
+    "cwd": "%HOMEDRIVE%%HOMEPATH%",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Git\\Git Release Notes.lnk"
+  },
+  {
+    "name": "IDEA StatiCa 24.0",
+    "exe": "C:\\Program Files\\IDEA StatiCa\\StatiCa 24.0\\IDEAStatiCa.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\IDEA StatiCa 24.0\\IDEA StatiCa 24.0.lnk"
+  },
+  {
+    "name": "Reset settings to default",
+    "exe": "C:\\Program Files\\IDEA StatiCa\\StatiCa 24.0\\reset_user_settings.bat",
+    "args": "",
+    "cwd": "C:\\Program Files\\IDEA StatiCa\\StatiCa 24.0\\",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\IDEA StatiCa 24.0\\Reset settings to default.lnk"
+  },
+  {
+    "name": "Grabber Help",
+    "exe": "C:\\Program Files (x86)\\Internet Download Manager\\grabber.chm",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Internet Download Manager\\Grabber Help.lnk"
+  },
+  {
+    "name": "IDM Help",
+    "exe": "C:\\Program Files (x86)\\Internet Download Manager\\idman.chm",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Internet Download Manager\\IDM Help.lnk"
+  },
+  {
+    "name": "Internet Download Manager",
+    "exe": "C:\\Program Files (x86)\\Internet Download Manager\\IDMan.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Internet Download Manager\\Internet Download Manager.lnk"
+  },
+  {
+    "name": "license",
+    "exe": "C:\\Program Files (x86)\\Internet Download Manager\\license.txt",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Internet Download Manager\\license.lnk"
+  },
+  {
+    "name": "TUTORIALS",
+    "exe": "C:\\Program Files (x86)\\Internet Download Manager\\tutor.chm",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Internet Download Manager\\TUTORIALS.lnk"
+  },
+  {
+    "name": "PyCharm 2025.2.4",
+    "exe": "C:\\Program Files\\JetBrains\\PyCharm 2025.2.4\\bin\\pycharm64.exe",
+    "args": "",
+    "cwd": "C:\\Program Files\\JetBrains\\PyCharm 2025.2.4",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\JetBrains\\PyCharm 2025.2.4.lnk"
+  },
+  {
+    "name": "Install Additional Tools for Node.js",
+    "exe": "C:\\Windows\\System32\\cmd.exe",
+    "args": "/d /c \"C:\\Program Files\\nodejs\\install_tools.bat\"",
+    "cwd": "C:\\Program Files\\nodejs\\",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Node.js\\Install Additional Tools for Node.js.lnk"
+  },
+  {
+    "name": "Node.js",
+    "exe": "C:\\Program Files\\nodejs\\node.exe",
+    "args": "",
+    "cwd": "C:\\Program Files\\nodejs\\",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Node.js\\Node.js.lnk"
+  },
+  {
+    "name": "GRASS GIS 8.4.2",
+    "exe": "C:\\Program Files\\QGIS 3.44.8\\bin\\grass84.bat",
+    "args": "--gui",
+    "cwd": "C:\\Users\\Ahmedsalah\\Documents",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\QGIS 3.44.8\\GRASS GIS 8.4.2.lnk"
+  },
+  {
+    "name": "OSGeo4W Shell",
+    "exe": "C:\\Program Files\\QGIS 3.44.8\\OSGeo4W.bat",
+    "args": " ",
+    "cwd": "C:\\PROGRA~1\\QGIS34~1.8",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\QGIS 3.44.8\\OSGeo4W Shell.lnk"
+  },
+  {
+    "name": "QGIS Desktop 3.44.8",
+    "exe": "C:\\Program Files\\QGIS 3.44.8\\bin\\qgis-ltr-bin.exe",
+    "args": "",
+    "cwd": "C:\\Users\\Ahmedsalah\\Documents",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\QGIS 3.44.8\\QGIS Desktop 3.44.8.lnk"
+  },
+  {
+    "name": "Qt Designer with QGIS 3.44.8 custom widgets",
+    "exe": "C:\\Program Files\\QGIS 3.44.8\\bin\\bgspawn.exe",
+    "args": "\"C:\\PROGRA~1\\QGIS34~1.8\\bin\\qgis-ltr-designer.bat\"",
+    "cwd": "C:\\Users\\Ahmedsalah\\Documents",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\QGIS 3.44.8\\Qt Designer with QGIS 3.44.8 custom widgets.lnk"
+  },
+  {
+    "name": "Setup",
+    "exe": "C:\\Program Files\\QGIS 3.44.8\\bin\\elevate.exe",
+    "args": "\"C:\\PROGRA~1\\QGIS34~1.8\\bin\\setup.bat\"",
+    "cwd": "C:\\Users\\Ahmedsalah\\Documents",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\QGIS 3.44.8\\Setup.lnk"
+  },
+  {
+    "name": "CSiLicenseAssistant SAP2000 26",
+    "exe": "C:\\Program Files\\Computers and Structures\\SAP2000 26\\CSiLicensing\\CSILicenseAssistant.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\SAP2000 26\\CSiLicenseAssistant SAP2000 26.lnk"
+  },
+  {
+    "name": "SAP2000 26",
+    "exe": "C:\\Program Files\\Computers and Structures\\SAP2000 26\\SAP2000.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\SAP2000 26\\SAP2000 26.lnk"
+  },
+  {
+    "name": "Task Manager",
+    "exe": "C:\\Windows\\system32\\taskmgr.exe",
+    "args": "/7",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\System Tools\\Task Manager.lnk"
+  },
+  {
+    "name": "Windows PowerShell ISE (x86)",
+    "exe": "C:\\Windows\\syswow64\\WindowsPowerShell\\v1.0\\PowerShell_ISE.exe",
+    "args": "",
+    "cwd": "%HOMEDRIVE%%HOMEPATH%",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows PowerShell\\Windows PowerShell ISE (x86).lnk"
+  },
+  {
+    "name": "Windows PowerShell ISE",
+    "exe": "C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\PowerShell_ISE.exe",
+    "args": "",
+    "cwd": "%HOMEDRIVE%%HOMEPATH%",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows PowerShell\\Windows PowerShell ISE.lnk"
+  },
+  {
+    "name": "Console RAR manual",
+    "exe": "C:\\Program Files\\WinRAR\\Rar.txt",
+    "args": "",
+    "cwd": "C:\\Users\\Ahmedsalah\\Desktop",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\WinRAR\\Console RAR manual.lnk"
+  },
+  {
+    "name": "What is new in the latest version",
+    "exe": "C:\\Program Files\\WinRAR\\WhatsNew.txt",
+    "args": "",
+    "cwd": "C:\\Users\\Ahmedsalah\\Desktop",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\WinRAR\\What is new in the latest version.lnk"
+  },
+  {
+    "name": "WinRAR help",
+    "exe": "C:\\Program Files\\WinRAR\\WinRAR.chm",
+    "args": "",
+    "cwd": "C:\\Users\\Ahmedsalah\\Desktop",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\WinRAR\\WinRAR help.lnk"
+  },
+  {
+    "name": "WinRAR",
+    "exe": "C:\\Program Files\\WinRAR\\WinRAR.exe",
+    "args": "",
+    "cwd": "C:\\Users\\Ahmedsalah\\Desktop",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\WinRAR\\WinRAR.lnk"
+  },
+  {
+    "name": "Database Compare",
+    "exe": "C:\\Program Files\\Microsoft Office\\root\\Client\\AppVLP.exe",
+    "args": "\"C:\\Program Files (x86)\\Microsoft Office\\Office16\\DCF\\DATABASECOMPARE.EXE\"",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\أدوات Microsoft Office\\Database Compare.lnk"
+  },
+  {
+    "name": "تفضيلات اللغة في Office",
+    "exe": "C:\\Program Files\\Microsoft Office\\root\\Office16\\SETLANG.EXE",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\أدوات Microsoft Office\\تفضيلات اللغة في Office.lnk"
+  },
+  {
+    "name": "Screen Recorder",
+    "exe": "C:\\Program Files (x86)\\ZD Soft\\Screen Recorder\\ScnRec.exe",
+    "args": "",
+    "cwd": "C:\\Program Files (x86)\\ZD Soft\\Screen Recorder\\",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\ZD Soft\\Screen Recorder\\Screen Recorder.lnk"
+  },
+  {
+    "name": "Application Verifier (X64)",
+    "exe": "C:\\Windows\\System32\\appverif.exe",
+    "args": "",
+    "cwd": "C:\\Windows\\system32\\",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows Kits\\Application Verifier (X64)\\Application Verifier (X64).lnk"
+  },
+  {
+    "name": "Application Verifier Help",
+    "exe": "C:\\Windows\\System32\\appverif.chm",
+    "args": "",
+    "cwd": "C:\\Windows\\system32\\",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows Kits\\Application Verifier (X64)\\Application Verifier Help.lnk"
+  },
+  {
+    "name": "Application Verifier (WOW)",
+    "exe": "C:\\Windows\\SysWOW64\\appverif.exe",
+    "args": "",
+    "cwd": "C:\\Windows\\SysWOW64\\",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows Kits\\Application Verifier (X86)\\Application Verifier (WOW).lnk"
+  },
+  {
+    "name": "Windows App Cert Kit",
+    "exe": "C:\\Program Files (x86)\\Windows Kits\\10\\App Certification Kit\\appcertui.exe",
+    "args": "",
+    "cwd": "C:\\Program Files (x86)\\Windows Kits\\10\\App Certification Kit\\",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows Kits\\Windows App Certification Kit\\Windows App Cert Kit.lnk"
+  },
+  {
+    "name": "Documentation for Desktop Apps",
+    "exe": "C:\\Program Files (x86)\\Windows Kits\\10\\Shortcuts\\DesktopDevCenterLearn.url",
+    "args": "",
+    "cwd": "C:\\Program Files (x86)\\Windows Kits\\10\\",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows Kits\\Windows Software Development Kit\\Documentation for Desktop Apps.lnk"
+  },
+  {
+    "name": "Documentation for Windows Store Apps",
+    "exe": "C:\\Program Files (x86)\\Windows Kits\\10\\Shortcuts\\WindowsStoreAppDevCenterLearn.url",
+    "args": "",
+    "cwd": "C:\\Program Files (x86)\\Windows Kits\\10\\",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows Kits\\Windows Software Development Kit\\Documentation for Windows Store Apps.lnk"
+  },
+  {
+    "name": "Samples for Desktop Apps",
+    "exe": "C:\\Program Files (x86)\\Windows Kits\\10\\Shortcuts\\DesktopDevCenterSamples.url",
+    "args": "",
+    "cwd": "C:\\Program Files (x86)\\Windows Kits\\10\\",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows Kits\\Windows Software Development Kit\\Samples for Desktop Apps.lnk"
+  },
+  {
+    "name": "Samples for Windows Store Apps",
+    "exe": "C:\\Program Files (x86)\\Windows Kits\\10\\Shortcuts\\WindowsStoreAppDevCenterSamples.url",
+    "args": "",
+    "cwd": "C:\\Program Files (x86)\\Windows Kits\\10\\",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows Kits\\Windows Software Development Kit\\Samples for Windows Store Apps.lnk"
+  },
+  {
+    "name": "Windows Software Development Kit",
+    "exe": "C:\\Windows\\explorer.exe",
+    "args": "\"C:\\Program Files (x86)\\Windows Kits\\10\\\"",
+    "cwd": "C:\\Program Files (x86)\\Windows Kits\\10\\",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows Kits\\Windows Software Development Kit\\Windows Software Development Kit.lnk"
+  },
+  {
+    "name": "Debuggable Package Manager",
+    "exe": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "args": "-NoExit -Command \"& { Import-Module Appx; Import-Module .\\AppxDebug.dll; Show-AppxDebug}\"",
+    "cwd": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\Common7\\IDE\\Remote Debugger\\Appx\\",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio 2019\\Visual Studio Tools\\Debuggable Package Manager.lnk"
+  },
+  {
+    "name": "AutoUpdate Tray",
+    "exe": "C:\\Program Files (x86)\\Hilti\\PROFIS AutoUpdate\\Hilti.AutoUpdate.Tray.exe",
+    "args": "",
+    "cwd": "C:\\Program Files (x86)\\Hilti\\PROFIS AutoUpdate\\",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Hilti\\PROFIS AutoUpdate\\AutoUpdate Tray.lnk"
+  },
+  {
+    "name": "Character Map",
+    "exe": "C:\\Windows\\system32\\charmap.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\System Tools\\Character Map.lnk"
+  },
+  {
+    "name": "BlueStacks Services",
+    "exe": "C:\\Users\\Ahmedsalah\\AppData\\Local\\Programs\\bluestacks-services\\BlueStacksServices.exe",
+    "args": "",
+    "cwd": "C:\\Users\\Ahmedsalah\\AppData\\Local\\Programs\\bluestacks-services",
+    "lnk": "C:\\Users\\Ahmedsalah\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\BlueStacks Services.lnk"
+  },
+  {
+    "name": "Grammarly",
+    "exe": "C:\\Users\\Ahmedsalah\\AppData\\Local\\Grammarly\\DesktopIntegrations\\Grammarly.Desktop.exe",
+    "args": "from-desktop",
+    "cwd": "C:\\Users\\Ahmedsalah\\AppData\\Local\\Grammarly\\DesktopIntegrations",
+    "lnk": "C:\\Users\\Ahmedsalah\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Grammarly.lnk"
+  },
+  {
+    "name": "Magnify",
+    "exe": "C:\\Windows\\system32\\magnify.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\Users\\Ahmedsalah\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Accessibility\\Magnify.lnk"
+  },
+  {
+    "name": "Narrator",
+    "exe": "C:\\Windows\\system32\\narrator.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\Users\\Ahmedsalah\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Accessibility\\Narrator.lnk"
+  },
+  {
+    "name": "On-Screen Keyboard",
+    "exe": "C:\\Windows\\system32\\osk.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\Users\\Ahmedsalah\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Accessibility\\On-Screen Keyboard.lnk"
+  },
+  {
+    "name": "Internet Explorer",
+    "exe": "C:\\Program Files\\Internet Explorer\\iexplore.exe",
+    "args": "",
+    "cwd": "%HOMEDRIVE%%HOMEPATH%",
+    "lnk": "C:\\Users\\Ahmedsalah\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\Internet Explorer.lnk"
+  },
+  {
+    "name": "Claude",
+    "exe": "C:\\Users\\Ahmedsalah\\AppData\\Local\\AnthropicClaude\\claude.exe",
+    "args": "",
+    "cwd": "C:\\Users\\Ahmedsalah\\AppData\\Local\\AnthropicClaude\\app-1.1.4173",
+    "lnk": "C:\\Users\\Ahmedsalah\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Anthropic\\Claude.lnk"
+  },
+  {
+    "name": "SNAP Configuration Optimiser",
+    "exe": "C:\\Program Files\\esa-snap\\bin\\snap-conf-optimiser.exe",
+    "args": "",
+    "cwd": "C:\\Program Files\\esa-snap\\bin",
+    "lnk": "C:\\Users\\Ahmedsalah\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\ESA SNAP\\SNAP Configuration Optimiser.lnk"
+  },
+  {
+    "name": "SNAP Desktop",
+    "exe": "C:\\Program Files\\esa-snap\\bin\\snap64.exe",
+    "args": "",
+    "cwd": "C:\\Program Files\\esa-snap\\bin",
+    "lnk": "C:\\Users\\Ahmedsalah\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\ESA SNAP\\SNAP Desktop.lnk"
+  },
+  {
+    "name": "MongoDB Compass",
+    "exe": "C:\\Users\\Ahmedsalah\\AppData\\Local\\MongoDBCompass\\MongoDBCompass.exe",
+    "args": "",
+    "cwd": "C:\\Users\\Ahmedsalah\\AppData\\Local\\MongoDBCompass\\app-1.48.2",
+    "lnk": "C:\\Users\\Ahmedsalah\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\MongoDB Inc\\MongoDB Compass.lnk"
+  },
+  {
+    "name": "Raya Master",
+    "exe": "C:\\Users\\Ahmedsalah\\.openclaw\\scripts\\raya_startup.bat",
+    "args": "",
+    "cwd": "C:\\Users\\Ahmedsalah\\.openclaw\\scripts",
+    "lnk": "C:\\Users\\Ahmedsalah\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Raya Master.lnk"
+  },
+  {
+    "name": "Visual Studio Code",
+    "exe": "C:\\Users\\Ahmedsalah\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+    "args": "",
+    "cwd": "C:\\Users\\Ahmedsalah\\AppData\\Local\\Programs\\Microsoft VS Code",
+    "lnk": "C:\\Users\\Ahmedsalah\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code\\Visual Studio Code.lnk"
+  },
+  {
+    "name": "Windows PowerShell",
+    "exe": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "args": "",
+    "cwd": "%HOMEDRIVE%%HOMEPATH%",
+    "lnk": "C:\\Users\\Ahmedsalah\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Windows PowerShell\\Windows PowerShell.lnk"
+  },
+  {
+    "name": "IDLE (Python 3.14)",
+    "exe": "C:\\Users\\Ahmedsalah\\AppData\\Local\\Python\\pythoncore-3.14-64\\pythonw.exe",
+    "args": "\"C:\\Users\\Ahmedsalah\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\idlelib\\idle.pyw\"",
+    "cwd": "D:\\00-الدكتوراه\\OneDrive - Faculty of Engineering_Benha (Benha University)\\Documents",
+    "lnk": "C:\\Users\\Ahmedsalah\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14\\IDLE (Python 3.14).lnk"
+  },
+  {
+    "name": "PyDoc (Python 3.14)",
+    "exe": "C:\\Users\\Ahmedsalah\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "args": "-m pydoc -b",
+    "cwd": "D:\\00-الدكتوراه\\OneDrive - Faculty of Engineering_Benha (Benha University)\\Documents",
+    "lnk": "C:\\Users\\Ahmedsalah\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14\\PyDoc (Python 3.14).lnk"
+  },
+  {
+    "name": "Python 3.14 Manuals",
+    "exe": "C:\\Users\\Ahmedsalah\\AppData\\Local\\Python\\pythoncore-3.14-64\\Doc\\html\\index.html",
+    "args": "",
+    "cwd": "D:\\00-الدكتوراه\\OneDrive - Faculty of Engineering_Benha (Benha University)\\Documents",
+    "lnk": "C:\\Users\\Ahmedsalah\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python\\Python 3.14\\Python 3.14 Manuals.lnk"
+  },
+  {
+    "name": "write",
+    "exe": "C:\\Windows\\System32\\write.exe",
+    "args": "",
+    "cwd": "C:\\Windows\\System32",
+    "lnk": null
+  },
+  {
+    "name": "Calculator",
+    "exe": null,
+    "args": "",
+    "cwd": "",
+    "lnk": null,
+    "appid": "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App"
+  },
+  {
+    "name": "Camera",
+    "exe": null,
+    "args": "",
+    "cwd": "",
+    "lnk": null,
+    "appid": "Microsoft.WindowsCamera_8wekyb3d8bbwe!App"
+  },
+  {
+    "name": "Photos",
+    "exe": null,
+    "args": "",
+    "cwd": "",
+    "lnk": null,
+    "appid": "Microsoft.Windows.Photos_8wekyb3d8bbwe!App"
+  },
+  {
+    "name": "Settings",
+    "exe": null,
+    "args": "",
+    "cwd": "",
+    "lnk": null,
+    "appid": "ms-settings:"
+  }
+]

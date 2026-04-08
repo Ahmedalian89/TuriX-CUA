@@ -8,8 +8,6 @@ class OutputSchemas:
         "properties": {
             "action": {
                 "type": "array",
-                "minItems": 0,
-                "default": [{"wait": {}}],
                 "items": {
                     "type": "object",
                     "properties": {
@@ -152,6 +150,7 @@ class OutputSchemas:
                     "sop_check": {"type": "string"},
                 },
                 "required": ["analysis", "sop_check"],
+                "additionalProperties": False,
             },
             "current_state": {
                 "type": "object",
@@ -161,6 +160,7 @@ class OutputSchemas:
                     "next_goal": {"type": "string"},
                 },
                 "required": ["step_evaluate", "ask_human", "next_goal"],
+                "additionalProperties": False,
             },
             "read_files": {
                 "type": "object",
@@ -168,12 +168,13 @@ class OutputSchemas:
                     "files": {
                         "type": "array",
                         "items": {"type": "string"},
-                        "minItems": 1,
                     }
                 },
                 "required": ["files"],
+                "additionalProperties": False,
             },
         },
+        "required": ["analysis", "current_state", "read_files"],
         "additionalProperties": False,
     }
 
@@ -210,8 +211,8 @@ class OutputSchemas:
             "iteration_info": {
                 "type": "object",
                 "properties": {
-                    "current_iteration": {"type": "integer", "minimum": 1},
-                    "total_iterations": {"type": "integer", "minimum": 1}
+                    "current_iteration": {"type": "integer"},
+                    "total_iterations": {"type": "integer"}
                 },
                 "required": ["current_iteration", "total_iterations"],
                 "additionalProperties": False
@@ -219,8 +220,7 @@ class OutputSchemas:
             "search_summary": {"type": "string"},
             "selected_skills": {
                 "type": "array",
-                "items": {"type": "string"},
-                "default": []
+                "items": {"type": "string"}
             },
             "natural_language_plan": {
                 "type": "string"
@@ -230,7 +230,7 @@ class OutputSchemas:
                 "items": {
                     "type": "object",
                     "properties": {
-                        "step_id": {"type": "string", "pattern": "^Step \\d+$"},
+                        "step_id": {"type": "string"},
                         "description": {"type": "string"},
                         "important_search_info": {"type": "string"},
                     },
@@ -239,7 +239,7 @@ class OutputSchemas:
                 },
             }
         },
-        "required": ["iteration_info", "search_summary", "selected_skills", "step_by_step_plan"],
+        "required": ["iteration_info", "search_summary", "selected_skills", "natural_language_plan", "step_by_step_plan"],
         "additionalProperties": False,
     }
 

@@ -141,6 +141,14 @@ def to_structured(llm: BaseChatModel, Schema, Structured_Output) -> BaseChatMode
     - ChatOllama -> bind(format=<json schema>) (Ollama json schema, when enabled)
     - anything else -> returned unchanged
     """
+    # Early exit: if a provider explicitly opts out of response_format, skip binding
+    if not llm_supports_response_format(llm):
+        logger.info(
+            "Structured response_format disabled for model '%s'; falling back to prompt-only JSON.",
+            getattr(llm, "model_name", getattr(llm, "model", "unknown")),
+        )
+        return llm
+
     OPENAI_CLASSES: tuple[Type[BaseChatModel], ...] = (ChatOpenAI, AzureChatOpenAI)
     ANTHROPIC_OR_GEMINI: tuple[Type[BaseChatModel], ...] = (
         ChatAnthropic,
@@ -170,7 +178,35 @@ def to_structured(llm: BaseChatModel, Schema, Structured_Output) -> BaseChatMode
         return llm.bind(response_format=response_format)
 
     if isinstance(llm, ANTHROPIC_OR_GEMINI):
-        return llm.with_structured_output(Structured_Output)
+        # For Gemini, try with_structured_output. If the schema is complex
+        # (e.g. ACTION_SCHEMA with many nested objects), it may fail with
+        # "too many states". In that case we fall back to JSON mode only.
+        try:
+            structured = llm.with_structured_output(Structured_Output)
+            # Quick validation: check schema complexity by name
+            schema_name = ""
+            if isinstance(Schema, dict):
+                js = Schema.get("json_schema", {})
+                schema_name = js.get("name", "")
+            if schema_name == "agent_action_output":
+                # ACTION schema is too complex for Gemini structured output.
+                # Use JSON response mode instead (no schema validation, but returns JSON).
+                logger.info(
+                    "Skipping structured output for complex action schema on Gemini; using JSON mode."
+                )
+                if isinstance(llm, ChatGoogleGenerativeAI):
+                    return llm.bind(
+                        generation_config={"response_mime_type": "application/json"}
+                    )
+                return llm
+            return structured
+        except Exception as e:
+            logger.warning("with_structured_output failed for %s: %s", type(llm).__name__, e)
+            if isinstance(llm, ChatGoogleGenerativeAI):
+                return llm.bind(
+                    generation_config={"response_mime_type": "application/json"}
+                )
+            return llm
 
     if isinstance(llm, OLLAMA_CLASSES):
         if not llm_supports_response_format(llm):

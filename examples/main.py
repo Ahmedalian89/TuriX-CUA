@@ -308,11 +308,124 @@ def build_llm(cfg: dict, *, enable_thinking: bool | None = None):
         )
 
     if provider == "google_flash":
-        return ChatGoogleGenerativeAI(
+        llm = ChatGoogleGenerativeAI(
             model="gemini-2.5-flash",
             api_key=api_key,
             temperature=temperature,
         )
+        # Gemini structured output via with_structured_output works for simple schemas
+        # but the complex ACTION_SCHEMA triggers "too many states".
+        # Mark it so to_structured can selectively skip only the actor schema.
+        return llm
+
+    if provider in {"github_models", "github_pat"}:
+        # GitHub Models API — works directly with a GitHub PAT (no token refresh needed)
+        pat = cfg.get("github_pat") or api_key or os.environ.get("GITHUB_PAT", "")
+        if not pat:
+            raise ValueError("github_models provider requires 'github_pat' or 'api_key'.")
+        # Strip unsupported extra_body params (chat_template_kwargs, etc.)
+        clean_kwargs = {}
+        if model_kwargs:
+            clean_kwargs = {k: v for k, v in model_kwargs.items() if k != "extra_body"}
+        llm = ChatOpenAI(
+            model=model or "gpt-4o",
+            openai_api_key=pat,
+            openai_api_base=base_url or "https://models.inference.ai.azure.com",
+            temperature=temperature,
+            model_kwargs=clean_kwargs,
+            max_tokens=max_tokens,
+            timeout=timeout,
+        )
+        # GitHub Models API supports response_format for OpenAI models
+        return llm
+
+    if provider in {"github_copilot", "github"}:
+        # Auto-refresh Copilot session token using GitHub PAT
+        cred_path = cfg.get("credentials_path") or os.path.join(
+            os.environ.get("USERPROFILE") or os.environ.get("HOME", ""),
+            ".openclaw", "credentials", "github-copilot.token.json",
+        )
+        github_pat = cfg.get("github_pat") or os.environ.get("GITHUB_PAT", "")
+
+        # Try to read existing token + check expiry
+        token_valid = False
+        if os.path.isfile(cred_path):
+            with open(cred_path, "r", encoding="utf-8") as f:
+                cred = json.load(f)
+            expires_at = cred.get("expiresAt", 0)
+            # Token is in ms, check if still valid (with 2-min buffer)
+            import time as _time
+            if expires_at > (_time.time() * 1000 + 120_000):
+                api_key = cred.get("token", api_key)
+                token_valid = True
+                logger.info("Copilot token still valid (expires in %d min)", int((expires_at/1000 - _time.time()) / 60))
+
+        # If token expired and we have a PAT, refresh it
+        if not token_valid and github_pat:
+            logger.info("Copilot token expired — refreshing via GitHub PAT...")
+            import urllib.request
+            req = urllib.request.Request(
+                "https://api.github.com/copilot_internal/v2/token",
+                headers={
+                    "Authorization": f"token {github_pat}",
+                    "Accept": "application/json",
+                    "Editor-Version": "vscode/1.96.0",
+                    "Editor-Plugin-Version": "copilot-chat/0.24.0",
+                },
+            )
+            try:
+                resp = urllib.request.urlopen(req, timeout=15)
+                data = json.loads(resp.read())
+                new_token = data.get("token", "")
+                new_expires = data.get("expires_at", 0)
+                if new_token:
+                    api_key = new_token
+                    # Convert ISO timestamp to ms if needed
+                    if isinstance(new_expires, str):
+                        from datetime import datetime as _dt, timezone as _tz
+                        try:
+                            exp_dt = _dt.fromisoformat(new_expires.replace("Z", "+00:00"))
+                            new_expires_ms = int(exp_dt.timestamp() * 1000)
+                        except Exception:
+                            new_expires_ms = int(_time.time() * 1000 + 1800_000)
+                    else:
+                        new_expires_ms = int(new_expires * 1000) if new_expires < 1e12 else int(new_expires)
+                    # Save refreshed token
+                    os.makedirs(os.path.dirname(cred_path), exist_ok=True)
+                    with open(cred_path, "w", encoding="utf-8") as f:
+                        json.dump({
+                            "token": new_token,
+                            "expiresAt": new_expires_ms,
+                            "updatedAt": int(_time.time() * 1000),
+                        }, f)
+                    logger.info("Copilot token refreshed successfully!")
+                    token_valid = True
+                else:
+                    logger.error("PAT refresh returned empty token")
+            except Exception as e:
+                logger.error("Failed to refresh Copilot token via PAT: %s", e)
+
+        if not api_key:
+            raise ValueError("GitHub Copilot provider requires a token in credentials, 'api_key', or 'github_pat'.")
+        copilot_headers = {
+            "Editor-Version": "vscode/1.96.0",
+            "Editor-Plugin-Version": "copilot-chat/0.24.0",
+            "Copilot-Integration-Id": "vscode-chat",
+            "Openai-Intent": "conversation-panel",
+        }
+        llm = ChatOpenAI(
+            model=model or "gpt-4o",
+            openai_api_key=api_key,
+            openai_api_base=base_url or "https://api.individual.githubcopilot.com",
+            temperature=temperature,
+            default_headers=copilot_headers,
+            model_kwargs=model_kwargs or {},
+            max_tokens=max_tokens,
+            timeout=timeout,
+        )
+        # GitHub Copilot API does not support response_format / structured output
+        llm._turix_supports_response_format = False
+        return llm
 
     if provider in {"openai", "gpt"}:
         return build_openai_compatible_llm(

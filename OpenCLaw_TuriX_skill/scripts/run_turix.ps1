@@ -5,12 +5,12 @@
 $ErrorActionPreference = "Stop"
 
 # ---------- Configuration ----------
-$ProjectDir = "your_dir\TuriX-CUA"
+$ProjectDir = "C:\Users\Ahmedsalah\TuriX-CUA"
 $ConfigFile = Join-Path $ProjectDir "examples\config.json"
 $EnvName = "turix_env"
 $CondaCmd = "conda"
 $RequiredBranch = "multi-agent-windows"
-$EnvPython = $null
+$EnvPython = Join-Path $ProjectDir "turix_env\Scripts\python.exe"
 
 # Colors (PowerShell host)
 function Log-Info([string]$msg) { Write-Host "[INFO] $msg" -ForegroundColor Green }
@@ -181,16 +181,18 @@ function Update-Config {
 function Preflight-Checks {
     Log-Info "Running pre-flight checks..."
 
-    $conda = Get-Command $CondaCmd -ErrorAction SilentlyContinue
-    if (-not $conda) {
-        Log-Error "conda not found in PATH"
-        exit 1
-    }
-
     if (-not (Test-Path -LiteralPath $ConfigFile)) {
         Log-Error "Config not found: $ConfigFile"
         exit 1
     }
+
+    # Check venv python exists
+    if (-not (Test-Path -LiteralPath $EnvPython)) {
+        Log-Error "Python venv not found: $EnvPython"
+        Log-Error "Run: python -m venv turix_env && turix_env\Scripts\pip install -r requirements.txt"
+        exit 1
+    }
+    Log-Info "Using venv python: $EnvPython"
 
     $git = Get-Command git -ErrorAction SilentlyContinue
     if ($git) {
@@ -216,32 +218,6 @@ function Preflight-Checks {
     }
     else {
         Log-Warn "git not found in PATH; cannot verify branch '$RequiredBranch'"
-    }
-
-    $envList = & $CondaCmd env list 2>$null
-    if ($LASTEXITCODE -ne 0) {
-        Log-Warn "Unable to inspect conda environments"
-    }
-    elseif ($envList -notmatch "(^|\s)$([regex]::Escape($EnvName))(\s|$)") {
-        Log-Warn "Conda env '$EnvName' not found in 'conda env list' output"
-    }
-
-    try {
-        $condaBaseRaw = & $CondaCmd info --base 2>$null | Select-Object -First 1
-        $condaBase = if ($null -ne $condaBaseRaw) { ([string]$condaBaseRaw).Trim() } else { "" }
-        if (-not [string]::IsNullOrWhiteSpace($condaBase)) {
-            $candidate = Join-Path $condaBase ("envs\" + $EnvName + "\python.exe")
-            if (Test-Path -LiteralPath $candidate) {
-                $script:EnvPython = $candidate
-                Log-Info "Resolved env python: $candidate"
-            }
-            else {
-                Log-Warn "Env python not found: $candidate"
-            }
-        }
-    }
-    catch {
-        Log-Warn "Unable to resolve conda base path"
     }
 
     Log-Info "Pre-flight complete"
