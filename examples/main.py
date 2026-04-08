@@ -245,6 +245,7 @@ def build_openai_compatible_llm(
 
 def build_llm(cfg: dict, *, enable_thinking: bool | None = None):
     """Build LLM based on configuration."""
+    logger = logging.getLogger("turix")
     provider = cfg["provider"].lower()
     api_key = cfg.get("api_key") or os.getenv("API_KEY") or os.getenv("OPENAI_API_KEY")
     model = cfg.get("model_name", "turix-model")
@@ -309,7 +310,7 @@ def build_llm(cfg: dict, *, enable_thinking: bool | None = None):
 
     if provider == "google_flash":
         llm = ChatGoogleGenerativeAI(
-            model="gemini-2.5-flash",
+            model=model or "gemini-2.5-flash",
             api_key=api_key,
             temperature=temperature,
         )

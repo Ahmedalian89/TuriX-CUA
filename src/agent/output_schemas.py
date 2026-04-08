@@ -133,7 +133,7 @@ class OutputSchemas:
         "type": "json_schema",
         "json_schema": {
             "name": "agent_action_output",
-            "strict": True,
+            "strict": False,
             "schema": ACTION_SCHEMA,
         },
     }
@@ -182,7 +182,7 @@ class OutputSchemas:
         "type": "json_schema",
         "json_schema": {
             "name": "agent_state_output",
-            "strict": True,
+            "strict": False,
             "schema": BRAIN_SCHEMA,
         },
     }
@@ -200,7 +200,7 @@ class OutputSchemas:
         "type": "json_schema",
         "json_schema": {
             "name": "memory_output",
-            "strict": True,
+            "strict": False,
             "schema": MEMORY_SCHEMA,
         },
     }
@@ -247,7 +247,7 @@ class OutputSchemas:
         "type": "json_schema",
         "json_schema": {
             "name": "planner_output",
-            "strict": True,
+            "strict": False,
             "schema": PLANNER_SCHEMA,
         },
     }

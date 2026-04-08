@@ -6,26 +6,26 @@
     "cleanup_previous_runs":  true,
     "brain_llm":  {
                       "provider":  "google_flash",
-                      "api_key":  "AIzaSyBXR7I78maOYzppC-909z2e-8tEhf-8sXQ",
+                      "api_key":  "AIzaSyBvBFHp-88rwjorlD31ZXvv42dtpi6Hc70",
                       "model_name":  "gemini-2.5-flash"
                   },
     "actor_llm":  {
                       "provider":  "google_flash",
-                      "api_key":  "AIzaSyBXR7I78maOYzppC-909z2e-8tEhf-8sXQ",
-                      "model_name":  "gemini-2.5-flash"
+                      "api_key":  "AIzaSyBvBFHp-88rwjorlD31ZXvv42dtpi6Hc70",
+                      "model_name":  "gemini-2.5-pro"
                   },
     "memory_llm":  {
                        "provider":  "google_flash",
-                       "api_key":  "AIzaSyBXR7I78maOYzppC-909z2e-8tEhf-8sXQ",
+                       "api_key":  "AIzaSyBvBFHp-88rwjorlD31ZXvv42dtpi6Hc70",
                        "model_name":  "gemini-2.5-flash"
                    },
     "planner_llm":  {
                         "provider":  "google_flash",
-                        "api_key":  "AIzaSyBXR7I78maOYzppC-909z2e-8tEhf-8sXQ",
+                        "api_key":  "AIzaSyBvBFHp-88rwjorlD31ZXvv42dtpi6Hc70",
                         "model_name":  "gemini-2.5-flash"
                     },
     "agent":  {
-                  "task":  "دوس help",
+                  "task":  "take a screenshot and describe what you see",
                   "memory_budget_tokens":  2000,
                   "summary_memory_budget_tokens":  8000,
                   "use_search":  false,
